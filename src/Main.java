@@ -13,7 +13,7 @@ public class Main {
         try{
             throw new IOException();
         }catch (IOException e){
-            System.out.println("throws Exception //т.к. формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
+            System.out.println("throws Exception //т.к. формат математической операции не удовлетворяет заданию - два операнда (1..10) и один оператор (+, -, /, *)");
         }
     } else if (newStroka.equals("Error2")) {
         try{
@@ -44,7 +44,7 @@ public class Main {
         int romanFlag = 0;
         int a=0,b=0;
         int answer=0;
-        String[] RomanAlphabet = {"Ⅰ","ⅠⅠ","ⅠⅠⅠ","ⅠⅤ","Ⅴ","ⅤⅠ","ⅤⅠⅠ","ⅤⅠⅠⅠ","ⅠⅩ","Ⅹ"};
+        String[] RomanAlphabet = {"Ⅰ","Ⅱ","Ⅲ","Ⅳ","Ⅴ","Ⅵ","Ⅶ","Ⅷ","Ⅸ","Ⅹ"};
         String myAnswer = new String();
 
         //-------ERROR CASE----------
@@ -90,9 +90,15 @@ public class Main {
 
         if(Error1==0 && Error2==0) {
 
-            if (str.firstMember.codePointAt(0)==8544 || str.firstMember.codePointAt(0)==8548 || str.firstMember.codePointAt(0)==8553) {
+            for (int i=0;i<=9;i++){
+                if(RomanAlphabet[i].equals(str.firstMember)){
+                    romanFlag=1;
+                    break;
+                }
+            }
+
+            if (romanFlag==1) {
                 //-------ROMAN CASE-----------
-                romanFlag = 1;
                 for (int i = 0; i <= 9; i++) {
                     if (RomanAlphabet[i].equals(str.firstMember)) {
                         a = i + 1;
