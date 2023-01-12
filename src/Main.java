@@ -44,7 +44,7 @@ public class Main {
         int romanFlag = 0;
         int a=0,b=0;
         int answer=0;
-        String[] RomanAlphabet = {"Ⅰ","Ⅱ","Ⅲ","Ⅳ","Ⅴ","Ⅵ","Ⅶ","Ⅷ","Ⅸ","Ⅹ"};
+        String[] RomanAlphabet = {"I","II","III","IV","V","VI","VII","VIII","IX","X"};
         String myAnswer = new String();
 
         //-------ERROR CASE----------
@@ -160,31 +160,31 @@ public class Main {
 
                     switch (valueBefore1) {
                         case "1":
-                            valueAfter1 = "Ⅹ";
+                            valueAfter1 = "X";
                             break;
                         case "2":
-                            valueAfter1 = "ⅩⅩ";
+                            valueAfter1 = "XX";
                             break;
                         case "3":
-                            valueAfter1 = "ⅩⅩⅩ";
+                            valueAfter1 = "XXX";
                             break;
                         case "4":
-                            valueAfter1 = "ⅩⅬ";
+                            valueAfter1 = "XL";
                             break;
                         case "5":
-                            valueAfter1 = "Ⅼ";
+                            valueAfter1 = "L";
                             break;
                         case "6":
-                            valueAfter1 = "ⅬⅩ";
+                            valueAfter1 = "LX";
                             break;
                         case "7":
-                            valueAfter1 = "ⅬⅩⅩ";
+                            valueAfter1 = "LXX";
                             break;
                         case "8":
-                            valueAfter1 = "ⅬⅩⅩⅩ";
+                            valueAfter1 = "LXXX";
                             break;
                         case "9":
-                            valueAfter1 = "ⅩⅭ";
+                            valueAfter1 = "XC";
                             break;
                     }
                     for (int i = 0; i < 9; i++) {
@@ -195,7 +195,7 @@ public class Main {
                     }
                     myAnswer = valueAfter1.concat(valueAfter2);
                     if (answer == 100) {
-                        myAnswer = "Ⅽ";
+                        myAnswer = "C";
                     }
                 }
               }
