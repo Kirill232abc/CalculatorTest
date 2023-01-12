@@ -4,7 +4,7 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
-    System.out.println("Введите математическое выражение");
+    System.out.println("Введите математическое выражение (два операнда с пробелом между ними и математическим оператором, например:2 + 2)");
     String stroka = s.nextLine();
     //stroka-->calc-->newStroka
     String newStroka = calc(stroka);
